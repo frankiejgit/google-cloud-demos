@@ -1,0 +1,9 @@
+name: 'vessel-route'
+hostnames: 
+- "vessel-agent.svc.mesh.private"
+meshes:
+- "projects/multi-agent-run-demo/locations/global/meshes/srkw-mesh"
+rules:
+- action:
+    destinations:
+    - serviceName: "projects/multi-agent-run-demo/locations/global/backendServices/vessel-agent-region" 

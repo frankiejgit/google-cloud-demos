@@ -1,0 +1,9 @@
+name: 'llm-proxy-route'
+hostnames: 
+- "llm.svc.mesh.private"
+meshes:
+- "projects/multi-agent-run-demo/locations/global/meshes/srkw-mesh"
+rules:
+- action:
+    destinations:
+    - serviceName: "projects/multi-agent-run-demo/locations/global/backendServices/llm-proxy-region"

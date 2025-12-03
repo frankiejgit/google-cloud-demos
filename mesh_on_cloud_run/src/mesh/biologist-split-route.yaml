@@ -1,0 +1,12 @@
+name: "biologist-split-route"
+hostnames:
+- "biologist-agent.svc.mesh.private"
+meshes:
+- "projects/multi-agent-run-demo/locations/global/meshes/srkw-mesh"
+rules:
+- action:
+    destinations:
+    - serviceName: "projects/multi-agent-run-demo/locations/global/backendServices/biologist-agent-v1-region"
+      weight: 80
+    - serviceName: "projects/multi-agent-run-demo/locations/global/backendServices/biologist-agent-v2-region"
+      weight: 20

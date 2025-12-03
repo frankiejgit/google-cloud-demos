@@ -1,0 +1,10 @@
+fastapi
+gunicorn
+uvicorn[standard]
+httpx
+google-generativeai
+google-genai
+pydantic
+pandas
+geopandas
+geopy

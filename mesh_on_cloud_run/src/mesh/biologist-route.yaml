@@ -1,0 +1,9 @@
+name: 'biologist-route'
+hostnames: 
+- "biologist-agent-v1.svc.mesh.private"
+meshes:
+- "projects/multi-agent-run-demo/locations/global/meshes/srkw-mesh"
+rules:
+- action:
+    destinations:
+    - serviceName: "projects/multi-agent-run-demo/locations/global/backendServices/biologist-agent-v1-region" 
