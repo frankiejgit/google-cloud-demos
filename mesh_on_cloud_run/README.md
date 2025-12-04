@@ -115,7 +115,7 @@ name: 'vessel-route'
 hostnames: 
 - "vessel.svc.mesh.private"
 meshes:
-- "projects/multi-agent-run-demo/locations/global/backendServices/vessel-agent-region"
+- "projects/<your-project>/locations/global/backendServices/vessel-agent-region"
 EOF
 
 gcloud network-services http-routes import llm-proxy-region \
@@ -134,13 +134,13 @@ name: "biologist-split-route"
 hostnames:
 - "biologist-agent.svc.mesh.private"
 meshes:
-- "projects/multi-agent-run-demo/locations/global/meshes/srkw-mesh"
+- "projects/<your-project>/locations/global/meshes/srkw-mesh"
 rules:
 - action:
 	destinations:
-	- serviceName: "projects/multi-agent-run-demo/locations/global/backendServices/biologist-agent-v1-region"
+	- serviceName: "projects/<your-project>/locations/global/backendServices/biologist-agent-v1-region"
 	  weight: 80
-	- serviceName: "projects/multi-agent-run-demo/locations/global/backendServices/biologist-agent-v2-region"
+	- serviceName: "projects/<your-project>/locations/global/backendServices/biologist-agent-v2-region"
 	  weight: 20
 EOF
 
